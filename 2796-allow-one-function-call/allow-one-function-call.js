@@ -7,9 +7,8 @@ var once = function(fn) {
     let result;
     return function(...args){
         if(hasBeenCalled) return;
-        result = fn(...args);
         hasBeenCalled = true;
-        return result;
+        return result = fn(...args);
     }
 };
 
